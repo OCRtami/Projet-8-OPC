@@ -1,0 +1,32 @@
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* 
+      .arrow
+      {
+         &-left{  
+          }
+
+          &-right
+          {
+          }
+      }
+  */
+}
+.banner .banner-wrap {
+  display: flex;
+  justify-content: center;
+  max-width: 1240px;
+  box-sizing: border-box;
+  margin: 15px 20px;
+  width: 100%;
+}
+.banner-img {
+  max-height: 255px;
+  max-width: 335px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=Logement.css.map */

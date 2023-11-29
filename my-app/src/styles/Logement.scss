@@ -1,0 +1,35 @@
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .banner-wrap{
+        display: flex;
+        justify-content: center;
+        max-width: 1240px;
+        box-sizing: border-box;
+        margin: 15px 20px;
+        width: 100%;
+    }
+
+    &-img{
+        max-height: 255px;
+        max-width: 335px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+/* 
+    .arrow
+    {
+       &-left{  
+        }
+
+        &-right
+        {
+        }
+    }
+*/
+}
+

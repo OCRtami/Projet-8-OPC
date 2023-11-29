@@ -1,14 +1,20 @@
 .header {
-    display: flex ;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px 15px 20px;
-    max-width: 1240px;
-    width: 100%;
-    box-sizing: border-box;
 
-   &-nav{
+    display: flex;
+    justify-content: center;
+
+    .header-wrap{
+        display: flex ;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 20px 15px 20px;
+        max-width: 1240px;
+        width: 100%;
+
+    }
+    
+    .header-nav{
         margin: 0;
         padding: 0;
         display: flex;
