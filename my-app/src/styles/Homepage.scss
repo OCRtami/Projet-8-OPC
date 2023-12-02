@@ -11,33 +11,3 @@
     align-items: center;
     margin: 15px 20px 20px 20px ;
 }
-
-.title-card{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background-image:
-    linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
-    url("../../assets/ImageMain.png");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    height: 111px;
-    width: 100%;
-    max-width: 1240px;
-
-    box-sizing: border-box;
-
-    .text{
-        padding-left: 15px;
-        font-family: Montserrat;
-        color: white;
-        font-size: 24px;
-
-        span{
-            white-space: nowrap;
-            padding-right: 15px;
-        }
-    }
-}   

@@ -1,0 +1,28 @@
+.tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #FF6060;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+
+
+    p{
+        overflow: hidden;
+        margin: 0 5px 0 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 768px){
+    .tag{
+        height: 25px;
+        width: 115px;
+        font-size: 14px;
+    }
+}
