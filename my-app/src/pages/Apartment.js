@@ -5,6 +5,7 @@ import {useParams} from 'react-router-dom';
 import Collapse from "../components/collapse/Collapse";
 import pinkStar from "../assets/Pinkstar.png";
 import  greyStar from "../assets/Greystar.png";
+import Carousel from "../components/carousel/Carousel"
 
 function Apartment(){
 
@@ -33,7 +34,8 @@ function Apartment(){
         
         <div className="logement">
             <div className="logement-wrap">
-                <img src={apartment.pictures[0]} alt="Representation du lieu concerné" className="logement-img"></img>
+                <Carousel pictures={apartment.pictures}/>
+                
                 <div className="logement-description">
                     <div className="info-wrap">
                         <div>
