@@ -6,20 +6,23 @@
   overflow: hidden;
 }
 
-.carrousel-img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.carousel-ImgFrame {
+  max-height: 255px;
   width: 100%;
-  max-height: 415px;
-  margin-bottom: 15px;
-  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+.carousel-ImgFrame .carrousel-img {
+  height: 100%;
+  width: 100%;
 }
 
 .arrows {
   display: flex;
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 .arrows .right-arrow {
   left: 10px;
@@ -35,7 +38,21 @@
   transition: 0.2s;
 }
 
+.counter {
+  text-shadow: 0 0 5px black, 0 0 5px black;
+  color: white;
+  font-size: 18px;
+  font-family: "Montserrat";
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+}
+
 @media (min-width: 1023px) {
+  .carousel-ImgFrame {
+    transition: 0.2s;
+    max-height: 415px;
+  }
   .arrows .right-arrow, .arrows .left-arrow {
     transition: 0.2s;
     height: 80px;

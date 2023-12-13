@@ -71,11 +71,13 @@
     .card{
         border-radius: 10px;
         overflow: hidden;
-        position: relative;    
+        position: relative;
+        
             img{
                 object-fit: cover;
                 height: 255px;
                 width: 100%;
+
             }
     
             h2{

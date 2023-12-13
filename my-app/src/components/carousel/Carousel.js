@@ -10,7 +10,7 @@ function Carousel({pictures}){
 
     // Remplit la const picturesArray des photos provenant du props "pictures" ( car ceux ci sont considerer comme un objet )
     pictures.map((e)=>{
-        picturesArray.push(e);
+        return(picturesArray.push(e));
     })
 
     function nextArrow(){
@@ -24,19 +24,21 @@ function Carousel({pictures}){
     function previousArrow(){
         nextSrc(actualSrc+1)
 
-        if (actualSrc == picturesArray.length -1) {
+        if (actualSrc === picturesArray.length -1) {
             nextSrc(0)
         }
     }
 
     return(
         <div className="carousel">
-            <img src={picturesArray[actualSrc]} alt="Representation du lieu concerné" className="carrousel-img"/>
-            <div className="arrows">
-                <img onClick={previousArrow} className="left-arrow"  src={rightArrow}/>
-                <img onClick={nextArrow} className="right-arrow" src={leftArrow}/>
+            <div className="carousel-ImgFrame">
+                <img src={picturesArray[actualSrc]} alt="Representation du lieu concerné" className="carrousel-img"/>
             </div>
-
+            <div className="arrows">
+                <img onClick={previousArrow} alt="fleche précedent de la gallerie" className="left-arrow"  src={rightArrow}/>
+                <img onClick={nextArrow} alt="fleche suivant de la gallerie"  className="right-arrow" src={leftArrow}/>
+            </div>
+            <p className="counter">{actualSrc+1}/{pictures.length}</p>
         </div>
     )
 }

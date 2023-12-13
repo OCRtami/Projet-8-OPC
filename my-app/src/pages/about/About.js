@@ -22,8 +22,8 @@ function About(){
     <div className="about">
         <Banner />
         <div className="about-collapse">
-            {aboutData.map((e)=>(
-                <Collapse title={e.title} data={e.content}/>               
+            {aboutData.map((e,index)=>(
+                <Collapse key={index} title={e.title} data={e.content}/>               
             ))}
         </div>
     </div>
