@@ -15,6 +15,7 @@
     }
     
     .header-nav{
+        transition: none;
         margin: 0;
         padding: 0;
         display: flex;
@@ -25,10 +26,47 @@
         color: #FF6060;
         text-transform: uppercase;
         font-size: 12px;
+
+        a{
+            transition: 0.1s;
+            color: #FF6060;
+            text-decoration: none;
+        }
+
+        & a:visited{
+            color: #FF6060;
+        }
+
+        .active{
+            text-decoration: underline;
+        }
+
+
     }
 
     .logo{
         width: 145px;
         height: 46px;
+        transition: 0.1s;
+    }
+}
+
+@media (min-width: 1023px){
+    .header {
+
+        .header-nav{
+            font-size: 24px;
+            text-transform: none;
+            transition: 0;
+        }
+    }
+}
+
+@media (min-width:1023px){
+    .header{
+        .logo{
+            width: 210px;
+            height: 68px;
+        }
     }
 }

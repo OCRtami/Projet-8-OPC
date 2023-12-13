@@ -1,34 +1,60 @@
-import "../styles/css/Logement.css"
-import logements from "../json/Fichier.json"
+import "../styles/css/Logement.css";
+import data from "../json/Fichier.json";
 import Tag from "../components/tag/Tag";
 import {useParams} from 'react-router-dom';
+import Collapse from "../components/collapse/Collapse";
+import pinkStar from "../assets/Pinkstar.png";
+import  greyStar from "../assets/Greystar.png";
 
 function Apartment(){
-//Afin de pouvoir generer le contenu des fiches de logements, il a fallut que je cherche un moyen de stocker l'id...
-//...,du logement pour lancer un filtrage et afficher le contenu desiré.
-//UseParams nous permet de récuperer le parametre ":id" dans l'URL (/Logement/:id). qu'on a definit dans le router.
-//C'est à dire que, lorsque un utilisateur clique sur un lien, l'url va se changer en {"/Logement/"+logement.id} ( voir card.js)
-//UseParams, va comprendre grace au " : " que la section après "/Logement/" correspond à la valeur qu'il doit prendre.
-//UseParams va donc prendre comme valeur, par exemple:"{id:'4e7f6a41c'}", il nous suffira juste de recuperer le contenu de la clé "id"
+
     const urlIdParams = useParams().id;
-    const selectedApartment = logements.filter((filtered) =>filtered.id === urlIdParams)
+    const selectedApartment = data.filter((filtered) =>filtered.id === urlIdParams)
+    const apartment = selectedApartment[0];
+    function starRating(nbrOfStar){
+        const maxRating=5;
+        const rating=[];
+
+        for(let i=0; i<maxRating; i++){
+
+            if(nbrOfStar > i){
+                rating.push(<img className="star" src={pinkStar} key={i}></img>)
+            } 
+
+            else if (nbrOfStar <= i){
+                rating.push(<img className="star" src={greyStar} key={i}></img>)
+            }
+        }
+
+        return rating;
+    }
 
     return(
         
         <div className="logement">
             <div className="logement-wrap">
-                <img src={selectedApartment[0].pictures[0]} alt="Representation du lieu concerné" className="logement-img"></img>
+                <img src={apartment.pictures[0]} alt="Representation du lieu concerné" className="logement-img"></img>
                 <div className="info">
-                    <h2>{selectedApartment[0].title}</h2>
-                    <h3>{selectedApartment[0].location}</h3>
+                    <h2>{apartment.title}</h2>
+                    <h3>{apartment.location}</h3>
+
                     <div className="tagsection">
-                    {selectedApartment[0].tags.map((element)=>(
-                        <Tag tag={element}/>
-                    ))}
-                </div>
-                <div className="Author">
-                        
-                </div>
+                        {apartment.tags.map((element, index)=>(
+                            <Tag tag={element} key={index}/>
+                        ))}
+                    </div>
+
+                    <div className="Author">
+                        <div className="Author-name">{apartment.host.name}</div>
+                        <div className="Author-rating">
+                            <div className="stars">{starRating(apartment.rating)}</div>
+                        </div>
+                    </div>
+
+                    <div className="collapse-wrap">
+                        <Collapse data={apartment.description} title={"Description"}/>
+                        <Collapse data={apartment.equipments} title={"Equipement"}/>
+                    </div>
                 </div>
 
             </div>

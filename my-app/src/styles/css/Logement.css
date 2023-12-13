@@ -1,5 +1,6 @@
 .logement {
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
@@ -8,12 +9,11 @@
 .logement .logement-wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   max-width: 1240px;
   box-sizing: border-box;
 }
-.logement .logement-wrap img {
+.logement .logement-wrap > img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -21,6 +21,7 @@
   margin-bottom: 15px;
 }
 .logement .logement-wrap h2 {
+  transition: 0.2s;
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 500;
@@ -28,6 +29,7 @@
   margin-bottom: 5px;
 }
 .logement .logement-wrap h3 {
+  transition: 0.2s;
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 500;
@@ -38,4 +40,32 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  height: 13px;
+}
+
+@media (min-width: 1023px) {
+  .logement .logement-wrap h2 {
+    font-size: 28px;
+  }
+  .logement .logement-wrap h3 {
+    font-size: 18px;
+  }
+  .logement .collapse-wrap {
+    display: flex;
+    gap: 70px;
+  }
+  .stars {
+    gap: 15px;
+  }
+  .star {
+    height: 24px;
+  }
 }/*# sourceMappingURL=Logement.css.map */

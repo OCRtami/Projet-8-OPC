@@ -67,6 +67,7 @@
   gap: 20px;
 }
 .card-grid .card {
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -92,9 +93,12 @@
   .card-grid {
     grid-template-columns: repeat(3, auto);
     border-radius: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
     box-sizing: border-box;
+    background-color: #F6F6F6;
+    gap: 60px;
   }
   .card-grid .card img {
     -o-object-fit: cover;

@@ -1,0 +1,11 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 20px 20px 20px;
+
+    &-collapse{
+        max-width: 1023px;
+    }
+}

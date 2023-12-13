@@ -1,26 +1,27 @@
 .logement{
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
 
-    .logement-wrap{
+    .logement-wrap{    
         display: flex;
         flex-direction: column;
-        justify-content: center;
         width: 100%;
         max-width: 1240px;
         box-sizing: border-box;
 
-        img{
+        & > img{
             object-fit: cover;
             width: 100%;
             max-height: 415px;
             margin-bottom: 15px;
         }
 
-        h2{
+        h2{    
+            transition: 0.2s;
             font-family: Montserrat;
             font-size: 18px;
             font-weight: 500;
@@ -28,7 +29,8 @@
             margin-bottom: 5px;
         }
 
-        h3{
+        h3{    
+            transition: 0.2s;
             font-family: Montserrat;
             font-size: 14px;
             font-weight: 500;
@@ -38,9 +40,45 @@
     }
 
 .tagsection{
+    
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 }
 
+.stars{
+    display: flex;
+    gap: 5px;
+}
+.star{
+    height: 13px;
+}
+
+@media (min-width: 1023px){
+    .logement{
+
+        .logement-wrap{
+            
+            h2{
+                font-size: 28px;
+            }
+
+            h3{
+                font-size: 18px;
+            }
+        }
+        
+        .collapse-wrap{
+            display: flex;
+            gap:70px;
+        }
+    }
+
+    .stars{
+        gap: 15px;
+    }
+    .star{
+        height: 24px;
+    }
+}

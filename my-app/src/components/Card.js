@@ -1,10 +1,7 @@
 import "../styles/css/Card.css"
-import logements from "../json/Fichier.json";
 import { Link } from 'react-router-dom'
 
-
-
-function Card(){
+function Card({logements}){
 
     return(
         <div className="card-grid">

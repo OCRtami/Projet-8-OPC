@@ -12,6 +12,7 @@
   width: 100%;
 }
 .header .header-nav {
+  transition: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -23,7 +24,33 @@
   text-transform: uppercase;
   font-size: 12px;
 }
+.header .header-nav a {
+  transition: 0.1s;
+  color: #FF6060;
+  text-decoration: none;
+}
+.header .header-nav a:visited {
+  color: #FF6060;
+}
+.header .header-nav .active {
+  text-decoration: underline;
+}
 .header .logo {
   width: 145px;
   height: 46px;
+  transition: 0.1s;
+}
+
+@media (min-width: 1023px) {
+  .header .header-nav {
+    font-size: 24px;
+    text-transform: none;
+    transition: 0;
+  }
+}
+@media (min-width: 1023px) {
+  .header .logo {
+    width: 210px;
+    height: 68px;
+  }
 }/*# sourceMappingURL=Header.css.map */
