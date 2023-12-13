@@ -42,6 +42,38 @@
   gap: 10px;
 }
 
+.author {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+.author-info {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.author-info .author-img {
+  border-radius: 90px;
+  height: 32px;
+  width: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.author-info .author-name {
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+  color: #FF6060;
+}
+.author-info-rating {
+  display: flex;
+  align-items: center;
+}
+
 .stars {
   display: flex;
   gap: 5px;
@@ -58,9 +90,32 @@
   .logement .logement-wrap h3 {
     font-size: 18px;
   }
+  .logement .logement-description {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logement .logement-description .info-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .logement .collapse-wrap {
     display: flex;
     gap: 70px;
+    padding-top: 10px;
+  }
+  .author {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .author-info .author-img {
+    transition: 0.2s;
+    width: 64px;
+    height: 64px;
+  }
+  .author-info .author-name {
+    font-size: 18px;
+    transition: 0.2s;
   }
   .stars {
     gap: 15px;

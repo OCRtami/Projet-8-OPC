@@ -34,29 +34,37 @@ function Apartment(){
         <div className="logement">
             <div className="logement-wrap">
                 <img src={apartment.pictures[0]} alt="Representation du lieu concerné" className="logement-img"></img>
-                <div className="info">
-                    <h2>{apartment.title}</h2>
-                    <h3>{apartment.location}</h3>
+                <div className="logement-description">
+                    <div className="info-wrap">
+                        <div>
+                            <h2>{apartment.title}</h2>
+                            <h3>{apartment.location}</h3>
+                        </div>
 
-                    <div className="tagsection">
-                        {apartment.tags.map((element, index)=>(
-                            <Tag tag={element} key={index}/>
-                        ))}
+                        <div className="tagsection">
+                            {apartment.tags.map((element, index)=>(
+                                <Tag tag={element} key={index}/>
+                            ))}
+                        </div>
                     </div>
+                    
+                    <div className="author">
 
-                    <div className="Author">
-                        <div className="Author-name">{apartment.host.name}</div>
-                        <div className="Author-rating">
+                        <div className="author-info">
+                            <div className="author-name">{apartment.host.name}</div>
+                            <img className="author-img" alt="Photo du propriétaire" src={apartment.host.picture}></img>
+                        </div>
+
+                        <div className="author-rating">
                             <div className="stars">{starRating(apartment.rating)}</div>
                         </div>
                     </div>
-
-                    <div className="collapse-wrap">
-                        <Collapse data={apartment.description} title={"Description"}/>
-                        <Collapse data={apartment.equipments} title={"Equipement"}/>
-                    </div>
                 </div>
-
+                
+                <div className="collapse-wrap">
+                    <Collapse data={apartment.description} title={"Description"}/>
+                    <Collapse data={apartment.equipments} title={"Equipement"}/>
+                </div>
             </div>
         </div>
     )
