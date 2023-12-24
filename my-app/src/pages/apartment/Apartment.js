@@ -1,11 +1,11 @@
-import "../styles/css/Logement.css";
-import data from "../json/Fichier.json";
-import Tag from "../components/tag/Tag";
+import "./css/Apartment.css";
+import data from "../../json/Fichier.json";
+import Tag from "../../components/tag/Tag";
 import {useParams} from 'react-router-dom';
-import Collapse from "../components/collapse/Collapse";
-import pinkStar from "../assets/Pinkstar.png";
-import  greyStar from "../assets/Greystar.png";
-import Carousel from "../components/carousel/Carousel"
+import Collapse from "../../components/collapse/Collapse";
+import pinkStar from "../../assets/Pinkstar.png";
+import  greyStar from "../../assets/Greystar.png";
+import Carousel from "../../components/carousel/Carousel"
 
 function Apartment(){
 

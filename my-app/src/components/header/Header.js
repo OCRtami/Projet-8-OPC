@@ -1,7 +1,7 @@
-import "../styles/css/Header.css";
-import logo from "../assets/KasaLogo.png"
+import "./css/Header.css";
+import logo from "../../assets/KasaLogo.png"
 import { Link, NavLink } from 'react-router-dom'
-import {useState} from "react";
+
 
 function Header() {
     

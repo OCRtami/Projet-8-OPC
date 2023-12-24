@@ -1,5 +1,5 @@
-import "../styles/css/Footer.css";
-import logo from "../assets/KasaLogo.png"
+import "./css/Footer.css";
+import logo from "../../assets/KasaLogo.png"
 
 function Footer() {
     return(

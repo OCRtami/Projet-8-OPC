@@ -4,6 +4,9 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  transition: 0.2s;
 }
 
 .carousel-ImgFrame {
@@ -49,6 +52,10 @@
 }
 
 @media (min-width: 1023px) {
+  .carousel {
+    margin-bottom: 30px;
+    transition: 0.2s;
+  }
   .carousel-ImgFrame {
     transition: 0.2s;
     max-height: 415px;

@@ -8,6 +8,8 @@ function Carousel({pictures}){
     const picturesArray=[];
     const [actualSrc,nextSrc] = useState(0)
 
+    //NextSrc à changer en "SetActualSrc"
+
     // Remplit la const picturesArray des photos provenant du props "pictures" ( car ceux ci sont considerer comme un objet )
     pictures.map((e)=>{
         return(picturesArray.push(e));
