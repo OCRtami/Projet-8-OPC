@@ -9,9 +9,10 @@ import Error from "./pages/error/Error";
 import Apartment from './pages/apartment/Apartment.js';
 import About from "./pages/about/About"
 
+//Selectionne l'id "root"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
+//Lui ajoute tout les composants ci dessous
 root.render(
   <React.StrictMode>
     <Router>

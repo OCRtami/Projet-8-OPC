@@ -6,9 +6,7 @@ import leftArrow from "../../assets/leftArrow.png"
 function Carousel({pictures}){
     
     const picturesArray=[];
-    const [actualSrc,nextSrc] = useState(0)
-
-    //NextSrc à changer en "SetActualSrc"
+    const [actualSrc,SetActualSrc] = useState(0)
 
     // Remplit la const picturesArray des photos provenant du props "pictures" ( car ceux ci sont considerer comme un objet )
     pictures.map((e)=>{
@@ -16,18 +14,18 @@ function Carousel({pictures}){
     })
 
     function nextArrow(){
-        nextSrc(actualSrc-1)
+        SetActualSrc(actualSrc-1)
 
         if (actualSrc <= 0) {
-        nextSrc(picturesArray.length - 1)
+            SetActualSrc(picturesArray.length - 1)
         }
     }
 
     function previousArrow(){
-        nextSrc(actualSrc+1)
+        SetActualSrc(actualSrc+1)
 
         if (actualSrc === picturesArray.length -1) {
-            nextSrc(0)
+            SetActualSrc(0)
         }
     }
 
